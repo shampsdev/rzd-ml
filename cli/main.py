@@ -6,7 +6,6 @@ import json
 
 from src.predictor import Predictor
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Get submission.")
     parser.add_argument(
