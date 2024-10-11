@@ -59,3 +59,8 @@ def label2id(label: str) -> int:
 def id2label(id: int) -> str:
     global _id2label
     return _id2label[id]
+
+
+def labels() -> list[str]:
+    global _label2id
+    return list(_label2id.keys())
