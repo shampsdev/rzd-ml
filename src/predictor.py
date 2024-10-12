@@ -1,5 +1,6 @@
 import os
 from .model import Model
+from .label2id import parse_label
 
 
 class Predictor:
@@ -15,6 +16,7 @@ class Predictor:
 
     def __call__(self, audio_path: str):
         prediction = self.model.predict(audio_path)
+        prediction.text = parse_label(prediction.label, prediction.attribute)
         result = {
             "audio": os.path.basename(audio_path),  # Audio file base name
             "text": prediction.text,  # Predicted text
