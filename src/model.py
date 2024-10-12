@@ -1,5 +1,6 @@
 from .text2label import TextToLabelModel
 from .text2attr import TextToAttributeModel
+from .speech2text import SpeechToTextModel
 
 
 class Prediction:
@@ -7,14 +8,6 @@ class Prediction:
         self.text = text
         self.label = label
         self.attribute = attribute
-
-
-class SpeechToTextModel:
-    def __init__(self):
-        pass
-
-    def predict(self, audio_path) -> str:
-        return "predicted"
 
 
 class Model:
