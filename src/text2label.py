@@ -4,7 +4,7 @@ from .label2id import label2id
 
 class TextToLabelModel:
     def __init__(self):
-        self.model = joblib.load("src/text2label.pkl")
+        self.model = joblib.load("app/ml/src/text2attr.pkl")
 
     def predict(self, text) -> int:
         return label2id(self.model.predict([text])[0])
