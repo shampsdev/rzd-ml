@@ -8,9 +8,6 @@ class Predictor:
     You are free to add your own properties and methods
     or modify existing ones, but the output submission
     structure must be identical to the one presented.
-
-    Examples:
-        >>> python -m get_submission --src input_dir --dst output_dir
     """
 
     def __init__(self):

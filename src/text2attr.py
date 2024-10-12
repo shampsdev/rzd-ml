@@ -3,7 +3,7 @@ import joblib
 
 class TextToAttributeModel:
     def __init__(self):
-        self.model = joblib.load("app/ml/src/text2attr.pkl")
+        self.model = joblib.load("app/ml/train/trained/text2attr.pkl")
 
     def predict(self, text) -> int:
         return self.model.predict([text])[0]
