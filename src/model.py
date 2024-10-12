@@ -1,13 +1,13 @@
 from .text2label import TextToLabelModel
 from .text2attr import TextToAttributeModel
 from .speech2text import SpeechToTextModel
+from pydantic import BaseModel
 
 
-class Prediction:
-    def __init__(self, text, label, attribute):
-        self.text = text
-        self.label = label
-        self.attribute = attribute
+class Prediction(BaseModel):
+    text: str
+    label: int
+    attribute: int
 
 
 class Model:
@@ -20,4 +20,4 @@ class Model:
         text = self.speech2text.predict(audio_path)
         label = self.text2label.predict(text)
         attr = self.text2attr.predict(text)
-        return Prediction(text, label, attr)
+        return Prediction(text=text, label=label, attribute=attr)
