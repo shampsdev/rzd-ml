@@ -8,4 +8,4 @@ class SpeechToTextModel:
         )
 
     def predict(self, audio_path) -> str:
-        return self.model.predict([audio_path])[0]["transcription"]
+        return self.model.transcribe([audio_path])[0]["transcription"]
