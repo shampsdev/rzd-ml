@@ -7,7 +7,7 @@ class TextToLabelModel:
         self.model = joblib.load("app/ml/src/text2attr.pkl")
 
     def predict(self, text) -> int:
-        return label2id(self.model.transcript([text])[0])
+        return label2id(self.model.transcribe([text])[0])
 
 
 if __name__ == "__main__":
