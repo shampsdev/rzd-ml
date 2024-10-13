@@ -17,6 +17,11 @@ python main.py --src train/dataset/hr_bot_noise --dst train/dataset
 
 Результат самопроверки можно найти в ноутбуке `train/predict.ipynb`. Предсказание датасета `luga` с вычисление метрик `F1` и `WER`. (`0.81` и `0.13` соответственно).
 
+### Остальные репозитории
+
+[Клиент](https://github.com/shampsdev/rzd-client)
+[Веб сервер](https://github.com/shampsdev/rzd-server)
+
 ### Обучение
 
 Подготовка: нужно скачать датасет [отсюда](https://lodmedia.hb.bizmrg.com/case_files/1144817/train_dataset_train_rzhd_pult.zip). Вытащить директорию DATASET. Переименовать в dataset и поместить в директорию `train/dataset`.
