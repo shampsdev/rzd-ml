@@ -1,5 +1,4 @@
 import joblib
-from .label2id import label2id
 
 
 class TextToLabelModel:
@@ -7,7 +6,7 @@ class TextToLabelModel:
         self.model = joblib.load("app/ml/train/trained/text2label.pkl")
 
     def predict(self, text) -> int:
-        return label2id(self.model.predict([text])[0])
+        return self.model.predict([text])[0]
 
 
 if __name__ == "__main__":
