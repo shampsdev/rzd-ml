@@ -21,6 +21,6 @@ class Predictor:
             "audio": os.path.basename(audio_path),  # Audio file base name
             "text": prediction.text,  # Predicted text
             "label": prediction.label,  # Text class
-            "attribute": prediction.attribute,
+            "attribute": prediction.attribute if prediction.label in [4, 10] else -1,
         }
         return result
