@@ -3,7 +3,7 @@ import joblib
 class TextToLabelModel:
     def __init__(self):
         # Load the trained model from a specified file
-        self.model = joblib.load("app/ml/train/trained/text2label.pkl")
+        self.model = joblib.load("train/trained/text2label.pkl")
 
     def predict(self, text) -> int:
         # Make a prediction for the given text and return the predicted label
